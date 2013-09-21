@@ -11,9 +11,16 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
+    <%# The flash is a special part of the session which is cleared with each request. 
+        This means that values stored there will only be available in the next request %>
+    <% flash.each do |key, value| %>
+       <div class="alert alert-<%= key %>"><%= value %></div>
+     <% end %>
     <div class="container">
       <%= yield %>
     </div>
     <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
+
   </body>
 </html>
