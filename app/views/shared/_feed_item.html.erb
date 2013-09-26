@@ -3,7 +3,6 @@
   <span class="user">
     <%= link_to feed_item.user.name, feed_item.user %>
   </span>
-  <span class="content"><%= feed_item.content %></span>
   <%= render partial: 'shared/micropost_info', :locals => {:micropost => feed_item} %>
   
 </li>
