@@ -1,0 +1,403 @@
+
+app/assets/javascripts/application.js,0
+
+app/controllers/application_controller.rb,79
+class ApplicationController < ActionController::BaseApplicationController1,0
+
+app/controllers/sessions_controller.rb,145
+class SessionsController < ApplicationControllerSessionsController1,0
+  def newnew2,49
+  def createcreate5,66
+  def destroydestroy16,383
+
+app/controllers/static_pages_controller.rb,172
+class StaticPagesController < ApplicationControllerStaticPagesController1,0
+  def homehome2,52
+  def helphelp5,70
+  def aboutabout8,90
+  def contactcontact11,111
+
+app/controllers/users_controller.rb,434
+class UsersController < ApplicationControllerUsersController1,0
+  def newnew7,281
+  def destroydestroy11,320
+  def createcreate23,566
+  def showshow34,774
+  def indexindex39,892
+  def editedit48,1041
+  def updateupdate52,1060
+  def user_paramsuser_params62,1237
+  def signed_in_usersigned_in_user66,1345
+  def correct_usercorrect_user74,1504
+  def admin_useradmin_user79,1619
+  def no_createno_create83,1696
+
+app/helpers/application_helper.rb,92
+module ApplicationHelperApplicationHelper1,0
+  def full_title(page_title)full_title2,25
+
+app/helpers/sessions_helper.rb,377
+module SessionsHelperSessionsHelper1,0
+  def current_user=(user)current_user=2,22
+  def current_user?(user)current_user?6,80
+  def current_usercurrent_user10,138
+  def sign_in(user)sign_in15,294
+  def signed_in?signed_in?26,722
+  def sign_out(user)sign_out30,769
+  def redirect_back_or(default)redirect_back_or37,925
+  def store_locationstore_location44,1169
+
+app/helpers/static_pages_helper.rb,47
+module StaticPagesHelperStaticPagesHelper1,0
+
+app/helpers/users_helper.rb,105
+module UsersHelperUsersHelper1,0
+  def gravatar_for(user, options = { :size => 50 })gravatar_for2,19
+
+app/models/micropost.rb,51
+class Micropost < ActiveRecord::BaseMicropost1,0
+
+app/models/user.rb,199
+class User < ActiveRecord::BaseUser1,0
+  def User.new_remember_tokennew_remember_token14,615
+    def User.encrypt(token)encrypt18,690
+    def create_remember_tokencreate_remember_token22,777
+
+bin/bundle,0
+
+bin/rails,0
+
+bin/rake,0
+
+config/application.rb,94
+module SampleAppSampleApp14,396
+  class Application < Rails::ApplicationApplication15,413
+
+config/boot.rb,0
+
+config/environment.rb,0
+
+config/environments/development.rb,0
+
+config/environments/production.rb,0
+
+config/environments/test.rb,0
+
+config/initializers/backtrace_silencers.rb,0
+
+config/initializers/filter_parameter_logging.rb,0
+
+config/initializers/inflections.rb,0
+
+config/initializers/mime_types.rb,0
+
+config/initializers/secret_token.rb,37
+def secure_tokensecure_token14,508
+
+config/initializers/session_store.rb,0
+
+config/initializers/wrap_parameters.rb,0
+
+config/routes.rb,0
+
+db/migrate/20130920094003_create_users.rb,85
+class CreateUsers < ActiveRecord::MigrationCreateUsers1,0
+  def changechange2,44
+
+db/migrate/20130920112856_add_index_to_users_email.rb,103
+class AddIndexToUsersEmail < ActiveRecord::MigrationAddIndexToUsersEmail1,0
+  def changechange2,53
+
+db/migrate/20130920114446_users_add_password_digest.rb,107
+class UsersAddPasswordDigest < ActiveRecord::MigrationUsersAddPasswordDigest1,0
+  def changechange2,55
+
+db/migrate/20130921215631_add_remember_token_to_users.rb,109
+class AddRememberTokenToUsers < ActiveRecord::MigrationAddRememberTokenToUsers1,0
+  def changechange2,56
+
+db/migrate/20130923201101_add_admin_to_users.rb,93
+class AddAdminToUsers < ActiveRecord::MigrationAddAdminToUsers1,0
+  def changechange2,48
+
+db/migrate/20130924131544_create_microposts.rb,95
+class CreateMicroposts < ActiveRecord::MigrationCreateMicroposts1,0
+  def changechange2,49
+
+db/schema.rb,0
+
+db/seeds.rb,0
+
+example_user.rb,95
+  def initialize(attributes = {})initialize5,43
+  def formatted_emailformatted_email10,147
+
+features/support/authentication_steps.rb,0
+
+features/support/env.rb,0
+
+public/404.html,0
+
+public/422.html,0
+
+public/500.html,0
+
+public/assets/application-4ab8ed6c16f4f87251a5266261707640.js,7933
+	cssShow = { position: "absolute", visibility: "hidden", display: "block" },position6808,188818
+	cssShow = { position: "absolute", visibility: "hidden", display: "block" },visibility6808,188818
+	cssShow = { position: "absolute", visibility: "hidden", display: "block" },display6808,188818
+		letterSpacing: 0,letterSpacing6810,188919
+		fontWeight: 400fontWeight6811,188939
+function vendorPropName( style, name ) {vendorPropName6818,189135
+function isHidden( elem, el ) {isHidden6840,189539
+function showHide( elements, show ) {showHide6847,189800
+	getStyles = function( elem ) {getStyles7085,196521
+	curCSS = function( elem, name, _computed ) {curCSS7089,196606
+function setPositiveNumber( elem, value, subtract ) {setPositiveNumber7176,199305
+function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {augmentWidthOrHeight7184,199580
+function getWidthOrHeight( elem, name, extra ) {getWidthOrHeight7223,200822
+function css_defaultDisplay( nodeName ) {css_defaultDisplay7267,202339
+function actualDisplay( name, doc ) {actualDisplay7299,203262
+		get: function( elem, computed ) {jQuery.cssHooks.opacity.get7337,204406
+		set: function( elem, value ) {jQuery.cssHooks.opacity.set7344,204667
+	jQuery.expr.filters.hidden = function( elem ) {jQuery.expr.filters.hidden7417,207246
+	jQuery.expr.filters.visible = function( elem ) {jQuery.expr.filters.visible7424,207599
+var r20 = /%20/g,r207456,208334
+jQuery.param = function( a, traditional ) {jQuery.param7495,209573
+function buildParams( prefix, obj, traditional, add ) {buildParams7528,210632
+function addToPrefiltersOrTransports( structure ) {addToPrefiltersOrTransports7643,214223
+		var dataType,dataType7653,214493
+	function inspect( dataType ) {inspectPrefiltersOrTransports.inspect7680,215262
+function inspectPrefiltersOrTransports( structure, options, originalOptions, jqXHR ) {inspectPrefiltersOrTransports7675,215101
+function ajaxExtend( target, src ) {ajaxExtend7702,216033
+jQuery.fn.load = function( url, params, callback ) {jQuery.fn.load7718,216366
+function ajaxHandleResponses( s, jqXHR, responses ) {ajaxHandleResponses8297,231692
+function ajaxConvert( s, response, jqXHR, isSuccess ) {ajaxConvert8352,233132
+var oldCallbacks = [],oldCallbacks8528,237377
+function createStandardXHR() {createStandardXHR8620,240134
+function createActiveXHR() {createActiveXHR8626,240230
+function createFxNow() {createFxNow8872,247954
+function createTween( value, prop, animation ) {createTween8879,248067
+function Animation( elem, properties, options ) {Animation8893,248413
+function propFilter( props, specialEasing ) {propFilter8997,251253
+			hooks.empty.fire = function() {hooks.empty.fire9079,253236
+function defaultPrefilter( elem, props, opts ) {defaultPrefilter9064,252779
+	return new Tween.prototype.init( elem, options, prop, end, easing );return9190,256063
+	return new Tween.prototype.init( elem, options, prop, end, easing );return.init9190,256063
+function Tween( elem, options, prop, end, easing ) {Tween9189,256010
+Tween.prototype = {Tween9194,256158
+	constructor: Tween,Tween.constructor9195,256178
+	init: function( elem, options, prop, end, easing, unit ) {Tween.init9196,256199
+	cur: function() {Tween.cur9205,256484
+	run: function( percent ) {Tween.run9212,256646
+Tween.prototype.init.prototype = Tween.prototype;Tween.init9238,257222
+	_default: {Tween.propHooks._default9241,257293
+		attrs = { height: type },genFx.which.height9415,262450
+function genFx( type, includeWidth ) {genFx9413,262399
+	opt.complete = function() {opt.complete9466,263933
+jQuery.speed = function( speed, easing, fn ) {jQuery.speed9447,263280
+	linear: function( p ) {jQuery.easing.linear9480,264135
+	swing: function( p ) {jQuery.easing.swing9483,264176
+jQuery.fx.tick = function() {jQuery.fx.tick9490,264303
+jQuery.fx.timer = function( timer ) {jQuery.fx.timer9511,264668
+jQuery.fx.start = function() {jQuery.fx.start9519,264809
+jQuery.fx.stop = function() {jQuery.fx.stop9525,264929
+	slow: 600,jQuery.fx.speeds.slow9531,265028
+	fast: 200,jQuery.fx.speeds.fast9532,265040
+	_default: 400jQuery.fx.speeds._default9534,265070
+	jQuery.expr.filters.animated = function( elem ) {jQuery.expr.filters.animated9541,265191
+		box = { top: 0, left: 0 },jQuery.fn.offset.docElem.top9557,265561
+		box = { top: 0, left: 0 },jQuery.fn.offset.docElem.left9557,265561
+jQuery.fn.offset = function( options ) {jQuery.fn.offset9547,265342
+	setOffset: function( elem, options, i ) {jQuery.offset.setOffset9586,266269
+function getWindow( elem ) {getWindow9709,269889
+jQuery.fn.size = function() {jQuery.fn.size9761,271958
+  var rails;rails9810,273728
+  var $document = $(document);$document9811,273741
+          type: method || 'GET', data: data, dataType: dataType,options.type9909,277674
+            withCredentials: withCredentialsoptions.xhrFields.withCredentials9933,278698
+        var jqxhr = rails.ajax(options);jqxhr9940,278864
+  visit = function(url) {visit10206,289951
+    xhr.onload = function() {xhr.onload10228,290581
+    xhr.onloadend = function() {xhr.onloadend10244,291119
+    xhr.onabort = function() {xhr.onabort10247,291184
+    xhr.onerror = function() {xhr.onerror10250,291257
+  fetchReplacement = function(url) {fetchReplacement10216,290189
+  fetchHistory = function(state) {fetchHistory10256,291367
+      url: document.location.href,pageCache.url10274,291838
+  cacheCurrentPage = function() {cacheCurrentPage10271,291736
+  constrainPageCacheTo = function(limit) {constrainPageCacheTo10283,292052
+  changePage = function(title, body, csrfToken, runScripts) {changePage10294,292328
+  executeScriptTags = function() {executeScriptTags10308,292720
+  removeNoscriptTags = function() {removeNoscriptTags10329,293593
+  reflectNewUrl = function(url) {reflectNewUrl10338,293926
+  reflectRedirectedUrl = function(xhr) {reflectRedirectedUrl10348,294183
+  rememberCurrentUrl = function() {rememberCurrentUrl10355,294491
+  rememberCurrentState = function() {rememberCurrentState10362,294661
+  rememberInitialPage = function() {rememberInitialPage10366,294753
+  recallScrollPosition = function(page) {recallScrollPosition10375,294975
+  resetScrollPosition = function() {resetScrollPosition10379,295083
+  removeHash = function(url) {removeHash10383,295160
+  triggerEvent = function(name) {triggerEvent10393,295371
+  invalidContent = function(xhr) {invalidContent10400,295551
+  extractTrackAssets = function(doc) {extractTrackAssets10404,295716
+  assetsChanged = function(doc) {assetsChanged10417,296133
+  intersection = function(a, b) {intersection10424,296441
+  extractTitleAndBody = function(doc) {extractTitleAndBody10439,296811
+    get: function(doc) {CSRFToken.get10446,297035
+    update: function(latest) {CSRFToken.update10456,297345
+    createDocumentUsingParser = function(html) {createDocumentUsingParser10467,297742
+    createDocumentUsingDOM = function(html) {createDocumentUsingDOM10470,297863
+    createDocumentUsingWrite = function(html) {createDocumentUsingWrite10476,298053
+  browserCompatibleDocumentParser = function() {browserCompatibleDocumentParser10465,297589
+  installClickHandlerLast = function(event) {installClickHandlerLast10500,298760
+  handleClick = function(event) {handleClick10507,298987
+  extractLink = function(event) {extractLink10518,299252
+  crossOriginLink = function(link) {crossOriginLink10527,299443
+  anchoredLink = function(link) {anchoredLink10531,299565
+  nonHtmlLink = function(link) {nonHtmlLink10535,299715
+  noTurbolink = function(link) {noTurbolink10541,299872
+  targetLink = function(link) {targetLink10550,300090
+  nonStandardClick = function(event) {nonStandardClick10554,300165
+  ignoreClick = function(event, link) {ignoreClick10558,300306
+  initializeTurbolinks = function() {initializeTurbolinks10562,300497
+
+public/assets/application-b6326aa027912de61cdbaacfd87a8d4c.js,7933
+	cssShow = { position: "absolute", visibility: "hidden", display: "block" },position6808,188818
+	cssShow = { position: "absolute", visibility: "hidden", display: "block" },visibility6808,188818
+	cssShow = { position: "absolute", visibility: "hidden", display: "block" },display6808,188818
+		letterSpacing: 0,letterSpacing6810,188919
+		fontWeight: 400fontWeight6811,188939
+function vendorPropName( style, name ) {vendorPropName6818,189135
+function isHidden( elem, el ) {isHidden6840,189539
+function showHide( elements, show ) {showHide6847,189800
+	getStyles = function( elem ) {getStyles7085,196521
+	curCSS = function( elem, name, _computed ) {curCSS7089,196606
+function setPositiveNumber( elem, value, subtract ) {setPositiveNumber7176,199305
+function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {augmentWidthOrHeight7184,199580
+function getWidthOrHeight( elem, name, extra ) {getWidthOrHeight7223,200822
+function css_defaultDisplay( nodeName ) {css_defaultDisplay7267,202339
+function actualDisplay( name, doc ) {actualDisplay7299,203262
+		get: function( elem, computed ) {jQuery.cssHooks.opacity.get7337,204406
+		set: function( elem, value ) {jQuery.cssHooks.opacity.set7344,204667
+	jQuery.expr.filters.hidden = function( elem ) {jQuery.expr.filters.hidden7417,207246
+	jQuery.expr.filters.visible = function( elem ) {jQuery.expr.filters.visible7424,207599
+var r20 = /%20/g,r207456,208334
+jQuery.param = function( a, traditional ) {jQuery.param7495,209573
+function buildParams( prefix, obj, traditional, add ) {buildParams7528,210632
+function addToPrefiltersOrTransports( structure ) {addToPrefiltersOrTransports7643,214223
+		var dataType,dataType7653,214493
+	function inspect( dataType ) {inspectPrefiltersOrTransports.inspect7680,215262
+function inspectPrefiltersOrTransports( structure, options, originalOptions, jqXHR ) {inspectPrefiltersOrTransports7675,215101
+function ajaxExtend( target, src ) {ajaxExtend7702,216033
+jQuery.fn.load = function( url, params, callback ) {jQuery.fn.load7718,216366
+function ajaxHandleResponses( s, jqXHR, responses ) {ajaxHandleResponses8297,231692
+function ajaxConvert( s, response, jqXHR, isSuccess ) {ajaxConvert8352,233132
+var oldCallbacks = [],oldCallbacks8528,237377
+function createStandardXHR() {createStandardXHR8620,240134
+function createActiveXHR() {createActiveXHR8626,240230
+function createFxNow() {createFxNow8872,247954
+function createTween( value, prop, animation ) {createTween8879,248067
+function Animation( elem, properties, options ) {Animation8893,248413
+function propFilter( props, specialEasing ) {propFilter8997,251253
+			hooks.empty.fire = function() {hooks.empty.fire9079,253236
+function defaultPrefilter( elem, props, opts ) {defaultPrefilter9064,252779
+	return new Tween.prototype.init( elem, options, prop, end, easing );return9190,256063
+	return new Tween.prototype.init( elem, options, prop, end, easing );return.init9190,256063
+function Tween( elem, options, prop, end, easing ) {Tween9189,256010
+Tween.prototype = {Tween9194,256158
+	constructor: Tween,Tween.constructor9195,256178
+	init: function( elem, options, prop, end, easing, unit ) {Tween.init9196,256199
+	cur: function() {Tween.cur9205,256484
+	run: function( percent ) {Tween.run9212,256646
+Tween.prototype.init.prototype = Tween.prototype;Tween.init9238,257222
+	_default: {Tween.propHooks._default9241,257293
+		attrs = { height: type },genFx.which.height9415,262450
+function genFx( type, includeWidth ) {genFx9413,262399
+	opt.complete = function() {opt.complete9466,263933
+jQuery.speed = function( speed, easing, fn ) {jQuery.speed9447,263280
+	linear: function( p ) {jQuery.easing.linear9480,264135
+	swing: function( p ) {jQuery.easing.swing9483,264176
+jQuery.fx.tick = function() {jQuery.fx.tick9490,264303
+jQuery.fx.timer = function( timer ) {jQuery.fx.timer9511,264668
+jQuery.fx.start = function() {jQuery.fx.start9519,264809
+jQuery.fx.stop = function() {jQuery.fx.stop9525,264929
+	slow: 600,jQuery.fx.speeds.slow9531,265028
+	fast: 200,jQuery.fx.speeds.fast9532,265040
+	_default: 400jQuery.fx.speeds._default9534,265070
+	jQuery.expr.filters.animated = function( elem ) {jQuery.expr.filters.animated9541,265191
+		box = { top: 0, left: 0 },jQuery.fn.offset.docElem.top9557,265561
+		box = { top: 0, left: 0 },jQuery.fn.offset.docElem.left9557,265561
+jQuery.fn.offset = function( options ) {jQuery.fn.offset9547,265342
+	setOffset: function( elem, options, i ) {jQuery.offset.setOffset9586,266269
+function getWindow( elem ) {getWindow9709,269889
+jQuery.fn.size = function() {jQuery.fn.size9761,271958
+  var rails;rails9810,273728
+  var $document = $(document);$document9811,273741
+          type: method || 'GET', data: data, dataType: dataType,options.type9909,277674
+            withCredentials: withCredentialsoptions.xhrFields.withCredentials9933,278698
+        var jqxhr = rails.ajax(options);jqxhr9940,278864
+  visit = function(url) {visit10206,289951
+    xhr.onload = function() {xhr.onload10228,290581
+    xhr.onloadend = function() {xhr.onloadend10244,291119
+    xhr.onabort = function() {xhr.onabort10247,291184
+    xhr.onerror = function() {xhr.onerror10250,291257
+  fetchReplacement = function(url) {fetchReplacement10216,290189
+  fetchHistory = function(state) {fetchHistory10256,291367
+      url: document.location.href,pageCache.url10274,291838
+  cacheCurrentPage = function() {cacheCurrentPage10271,291736
+  constrainPageCacheTo = function(limit) {constrainPageCacheTo10283,292052
+  changePage = function(title, body, csrfToken, runScripts) {changePage10294,292328
+  executeScriptTags = function() {executeScriptTags10308,292720
+  removeNoscriptTags = function() {removeNoscriptTags10329,293593
+  reflectNewUrl = function(url) {reflectNewUrl10338,293926
+  reflectRedirectedUrl = function(xhr) {reflectRedirectedUrl10348,294183
+  rememberCurrentUrl = function() {rememberCurrentUrl10355,294491
+  rememberCurrentState = function() {rememberCurrentState10362,294661
+  rememberInitialPage = function() {rememberInitialPage10366,294753
+  recallScrollPosition = function(page) {recallScrollPosition10375,294975
+  resetScrollPosition = function() {resetScrollPosition10379,295083
+  removeHash = function(url) {removeHash10383,295160
+  triggerEvent = function(name) {triggerEvent10393,295371
+  invalidContent = function(xhr) {invalidContent10400,295551
+  extractTrackAssets = function(doc) {extractTrackAssets10404,295716
+  assetsChanged = function(doc) {assetsChanged10417,296133
+  intersection = function(a, b) {intersection10424,296441
+  extractTitleAndBody = function(doc) {extractTitleAndBody10439,296811
+    get: function(doc) {CSRFToken.get10446,297035
+    update: function(latest) {CSRFToken.update10456,297345
+    createDocumentUsingParser = function(html) {createDocumentUsingParser10467,297742
+    createDocumentUsingDOM = function(html) {createDocumentUsingDOM10470,297863
+    createDocumentUsingWrite = function(html) {createDocumentUsingWrite10476,298053
+  browserCompatibleDocumentParser = function() {browserCompatibleDocumentParser10465,297589
+  installClickHandlerLast = function(event) {installClickHandlerLast10500,298760
+  handleClick = function(event) {handleClick10507,298987
+  extractLink = function(event) {extractLink10518,299252
+  crossOriginLink = function(link) {crossOriginLink10527,299443
+  anchoredLink = function(link) {anchoredLink10531,299565
+  nonHtmlLink = function(link) {nonHtmlLink10535,299715
+  noTurbolink = function(link) {noTurbolink10541,299872
+  targetLink = function(link) {targetLink10550,300090
+  nonStandardClick = function(event) {nonStandardClick10554,300165
+  ignoreClick = function(event, link) {ignoreClick10558,300306
+  initializeTurbolinks = function() {initializeTurbolinks10562,300497
+
+script/cucumber,0
+
+spec/factories.rb,0
+
+spec/models/micropost_spec.rb,0
+
+spec/models/user_spec.rb,0
+
+spec/requests/authentication_pages_spec.rb,0
+
+spec/requests/static_pages_spec.rb,0
+
+spec/requests/user_pages_spec.rb,0
+
+spec/spec_helper.rb,0
+
+spec/support/utilities.rb,87
+def full_title(page_title)full_title1,0
+def sign_in(user, options={})sign_in14,265

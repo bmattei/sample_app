@@ -2,14 +2,21 @@ class UsersController < ApplicationController
   before_action :signed_in_user, :only => [:index, :edit, :update]
   before_action :correct_user,   :only => [:edit, :update]
   before_action :admin_user,     :only =>:destroy
+  before_action :no_create,      :only => [:new, :create]
 
   def new
     @user =  User.new
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "User destroyed."
+    
+    user = User.find(params[:id])
+    if (current_user?(user))
+      flash[:error] = 'You can not destroy yourself'
+    else
+      user.destroy
+      flash[:success] = "User destroyed."
+    end
     redirect_to users_url
   end
 
@@ -26,6 +33,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(:page => params[:page])
   end
 
   def index
@@ -55,28 +63,17 @@ class UsersController < ApplicationController
     params.required(:user).permit(:name, :email, :password,:password_confirmation)
   end
 
-  def signed_in_user
-    # Store loaction user was attempting to get to so when they sign in we
-    # Direct them there
-    store_location()
-    #
-    #  Short cut for assigning to flash.  Equivilent to:
-    #  unless signed_in?
-    #    flash[:notice] = "Please sign in."
-    #    redirect_to signin_url
-    #  end
-    #
-    redirect_to signin_url, :notice => "Please sign in." unless signed_in?
-
-  end
-
   def correct_user
     @user = User.find(params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
-  
+
   def admin_user
     redirect_to(root_url) unless current_user.admin?
+  end
+
+  def no_create
+    redirect_to(root_url)  if current_user
   end
 
 end

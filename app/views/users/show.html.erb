@@ -8,6 +8,17 @@
       </h1>
     </section>
   </aside>
+	<div class="span8">
+    <% if @user.microposts.any? %>
+    <h3>Microposts (<%= @user.microposts.count %>)</h3>
+    <% # partiol _microposts.html.erb must be defined for this to work %>
+    <ol class="microposts">
+      <%= render @microposts %>
+    </ol>
+		<%# Adds pagination - not we pas @microposts - else it will defautt to @users%>
+    <%= will_paginate @microposts %>  
+    <% end %>
+  </div>
 </div>
 
 <%= @user.name %>, <%= @user.email %>
